@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners -->
+  <meta name="description" content="Research Project Page">
+  <meta property="og:title" content="Research Project Page" />
+  <meta property="og:description" content="Research Project Page Description" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="Research Project Page">
+  <meta name="twitter:description" content="Research Project Page Description">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Research, Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DexUMI: <br>Using Human Hand as the Universal Manipulation
+              Interface
+              for<br> Dexterous Manipulation</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Abstract + Intro Video -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Abstract</h2>
+
+      <!-- Abstract -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We present DexUMI - a data collection and policy learning framework that uses the human hand as the
+              natural interface
+              to transfer dexterous manipulation skills to various robot hands.
+              DexUMI includes hardware and software adaptations to minimize the embodiment gap between the human hand
+              and various
+              robot hands.The hardware adaptation bridges the kinematics gap using a wearable hand exoskeleton. It
+              allows direct haptic feedback
+              in manipulation data collection and adapts human motion to feasible robot hand motion.The software
+              adaptation bridges the visual gap by replacing the human hand in video data with high-fidelity robot hand
+              inpainting.We demonstrate DexUMI's capabilities through comprehensive real-world experiments on two
+              different dexterous robot hand
+              hardware platforms, achieving an average task success rate of 86%..
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Video -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <video poster="" id="intro-video" autoplay controls>
+              <source src="static/videos/dexumi_intro_compressed.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Introduction to DexUMI
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Two Hardware Videos (side by side) -->
+  <section class="section is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Hardware Design</h2>
+
+      <div class="hardware-videos">
+        <div class="hardware-video">
+          <video poster="" id="hardware-video1" autoplay controls muted loop>
+            <source src="static/videos/xhand_web.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered">XHand exoskeleton</h3>
+        </div>
+
+        <div class="hardware-video">
+          <video poster="" id="hardware-video2" autoplay controls muted loop>
+            <source src="static/videos/inspire_web.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered">Inspire Hand exoskeleton</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Experiment Rollout Videos (2 videos side by side for each task) -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Capability Experiments</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <video poster="" id="intro-video" controls>
+              <source src="static/videos/comparison_recording_compressed.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            DexUMI experiment video. Please check complete evaluations below.
+          </h2>
+        </div>
+      </div>
+      <!-- Tea Picking Task -->
+      <h4 class="title is-5">Tea Picking with Tool</h4>
+      <div class="task-description">
+        <p><strong>Task:</strong> Grasp tweezers from the table and use them to transfer tea leaves from a teapot to a
+          cup. The main challenge is to stably and precisely operate the deformable tweezers with multi-finger contacts.
+        </p>
+        <p class="hardware-info"><strong>Hardware:</strong> XHand and Inspire Hand.</p>
+      </div>
+
+      <div class="video-row">
+        <div class="video-column">
+          <video poster="" autoplay controls muted loop>
+            <source src="static/videos/xhand_tea.mp4" type="video/mp4">
+          </video>
+          <h5 class="subtitle has-text-centered">Ours(Xhand)</h5>
+        </div>
+        <div class="video-column">
+          <video poster="" autoplay controls muted loop>
+            <source src="static/videos/inspire_tea.mp4" type="video/mp4">
+          </video>
+          <h5 class="subtitle has-text-centered">Ours(Inspire)</h5>
+        </div>
+      </div>
+      <div class="task-description">
+        With DexUMI Framework, both XHand and Inspire Hand can complete this long-horizon task with success rate of
+        85% on average.
+      </div>
+      <div class="has-text-centered mt-4">
+        <a href="static/videos/pages/tea_eval.html" class="button is-primary is-small">
+          <span class="icon">
+            <i class="fas fa-video"></i>
+          </span>
+          <span>View All Tea Evaluation Videos</span>
+        </a>
+      </div>
+
+
+      <!-- Task 2 -->
+      <div class="task-video-container">
+        <h4 class="title is-5">Cube Picking</h4>
+        <div class="task-description">
+          <p><strong>Task:</strong> Pick up a 2.5cm wide cube from a table and place it into a cup. This evaluates the
+            basic capabilities and precision of
+            the DexUMI system.</p>
+          <p><strong>Ablation:</strong> We compare the form of finger action trajectory: absolute position or relative
+            trajectory. Notice, We always use relative position for wrist action.
+          <p class="hardware-info"><strong>Hardware:</strong> Inspire Hand.</p>
+        </div>
+        <div class="video-row">
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/inspire/pickNplace/pickNplace_demo.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">Ours</h5>
+          </div>
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/inspire/pickNplace/pickplace_abs_action.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">Absolute finger action trajectory</h5>
+          </div>
+        </div>
+        <div class="task-description">
+          Absolute finger action fail to grasp the cube as it closed the index earlier. We found relative action
+          constantly
+          yield more precise finger actions across all tasks due to its simpler distribution and more reactive behavior.
+        </div>
+      </div>
+      <div class="has-text-centered mt-4">
+        <a href="static/videos/pages/cube_eval.html" class="button is-primary is-small">
+          <span class="icon">
+            <i class="fas fa-video"></i>
+          </span>
+          <span>View All Cube Picking Evaluation Videos</span>
+        </a>
+      </div>
+
+
+      <!-- Task 3 -->
+      <div class="task-video-container">
+        <h4 class="title is-5">Kitchen Manipulation</h4>
+        <div class="task-description">
+          <p><strong>Task:</strong> The task involves four sequential steps: turn off the stove knob; transfer the pan
+            from the stove top to the counter; pick up salt from a container; and lastly, sprinkle it over the food in
+            the pan.
+            The task tests DexUMI's capability over long-horizon tasks with precise actions, tactile sensing and skills
+            beyond using fingertips (utilizing the sides of fingers for stable pan handling).</p>
+          <p><strong>Ablation:</strong> The wearable exoskeleton allows users to directly contact objects and receive
+            haptic feedback. However, this human haptic feedback cannot be directly transferred to the robotic dexterous
+            hand.
+            Therefore, we install tactile sensors on the exoskeleton to capture and translate these tactile
+            interactions.
+            We compare the policies trained with and without tactile sensor input.</p>
+          <p class="hardware-info"><strong>Hardware:</strong> XHand.</p>
+        </div>
+        <div class="video-row">
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/xhand/kitchen/kitchen_demo.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">Ours</h5>
+          </div>
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/xhand/kitchen/kitchen_demo_no_tactile.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">No Tactile Sensor</h5>
+          </div>
+        </div>
+        <div class="task-description">
+          The policy without tactile sensor input failed to grasp the seasoning. With tactile sensors, the fingers
+          always insert into the salt first then close the fingers. Without tactile feedback,
+          the fingers attempt to grasp the salt sometimes in the air.
+        </div>
+      </div>
+      <div class="has-text-centered mt-4">
+        <a href="static/videos/pages/kitchen_eval.html" class="button is-primary is-small">
+          <span class="icon">
+            <i class="fas fa-video"></i>
+          </span>
+          <span>View All Kitchen Manipulation Evaluation Videos</span>
+        </a>
+      </div>
+
+
+      <!-- Task 4 -->
+      <div class="task-video-container">
+        <h4 class="title is-5">Egg Carton</h4>
+        <div class="task-description">
+          <p><strong>Task:</strong> Open an egg carton with multiple fingers: the hand needs the index, middle, ring,
+            and little fingers to apply downward
+            pressure on the carton's top while simultaneously using the thumb to lift the front latch. The task
+            evaluates multi-finger coordination</p>
+          <p><strong>Ablation:</strong> DexUMI developed a software adaption pipeline to bridge the visual gap between
+            policy training and robot depolyment. To test whether software adaption pipeline is crucial to our
+            framework, we test the policy training without software adaption and replaces eplaces pixels occupied by the
+            exoskeleton (during training) or robot hand (during inference) with a green color mask.
+          <p class="hardware-info"><strong>Hardware:</strong> Inspire Hand.</p>
+        </div>
+        <div class="video-row">
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/inspire/egg/egg_demo.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">Ours</h5>
+          </div>
+          <div class="video-column">
+            <video poster="" autoplay controls muted loop>
+              <source src="static/videos/inspire/egg/egg_maskout.mp4" type="video/mp4">
+            </video>
+            <h5 class="subtitle has-text-centered">Without Software Adaption</h5>
+          </div>
+        </div>
+        <div class="task-description">
+          Through the
+          experiments, we found software adaption is critical to bridge the visual gap in DexUMI pipeline. Without
+          software adaption, the policy still learn course action like approaching egg box. However, it could not
+          perform precise action when interacting with object.
+        </div>
+      </div>
+
+      <div class="has-text-centered mt-4">
+        <a href="static/videos/pages/egg_eval.html" class="button is-primary is-small">
+          <span class="icon">
+            <i class="fas fa-video"></i>
+          </span>
+          <span>View All Egg Carton Evaluation Videos</span>
+        </a>
+      </div>
+
+      <!-- Section 4: Inpaint Videos (1 video per row) -->
+      <section class="section is-light">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 section-title">Inpaint Results</h2>
+
+          <body>
+            <p>
+              We show the exoskeleton data and inpainted video side by side to demonstrate our
+              software adaptation layer capability. Our software adaptation bridges the visual gap by replacing the
+              human hand
+              and exoskeleton in visual observation recorded by the wrist camera with high-fidelity robot hand
+              inpainting.
+              Though the overall inpainting quality is good, we found there are still some deficits in the output
+              caused by:
+            </p>
+
+            <ul>
+              <li><strong>1. Imperfect Segmentation from SAM2:</strong> In most cases, we found SAM2 (<a
+                  href="#ref-ravi2024">Ravi et
+                  al., 2024</a>) can segment the human hand and exoskeleton pretty well. However, we notice, SAM2
+                sometimes misses
+                some small areas on the exoskeleton. </li>
+
+              <li><strong>2. Quality of inpainting method:</strong> We use flow-based inpainting ProPainter (<a
+                  href="#ref-zhou2023">Zhou et al.,
+                  2023</a>) to replace the human
+                and exoskeleton
+                pixels with background pixels. Though
+                the overall quality is high, there are some areas still blurry.</li>
+
+              <li><strong>3. Robot hand hardware:</strong> Throughout our experiments, we found that both the Inspire
+                Hand and
+                XHand lack sufficient precision due to backlash and
+                friction. For example, the fingertip location of the Inspire Hand differs when moving from 1000 to 500
+                motor
+                units compared to moving from 0 to 500 motor units. Consequently, when fitting regression models between
+                encoder and hand motor values, we can typically ensure precision in only "one direction"—either when
+                closing the
+                hand or opening it. This inevitably causes minor discrepancies in the
+                inpainting and action mapping processes.</li>
+              <li><strong>4. Inconsistent illumination:</strong> Similar to prior work (<a href="#ref-chen2024">Chen et
+                  al.,
+                  2024</a>), we found that illumination on the robot hand might be inconsistent with what the robot
+                experiences during
+                deployment. Therefore, we add image augmentation including color jitter and random grayscale during
+                policy training to
+                make the learned policy less sensitive to lightingconditions.</li>
+              <li><strong>5. 3D-printed exoskeleton deformation:</strong> The human hand is powerful and can sometimes
+                cause the 3D-printed exoskeleton to deform during operation. In such cases,
+                the encoder value fails to reflect this deformation. Consequently, the robot finger location might not
+                align with the
+                exoskeleton's actual finger position.</li>
+            </ul>
+          </body>
+
+          Nevertheless, the processed visual observation is passed to the manipulation policy as input. The learned
+          policy
+          achieves an average task success rate of 86% on two different robot hardware platforms. This suggests our
+          software
+          adaptation layer can effectively minimize the visual gap for policy learning and deployment.
+          <!-- Inpaint Task 1 -->
+          <div class="inpaint-task-container">
+            <h4 class="title is-5">Cube Picking</h4>
+            <div class="task-description">
+            </div>
+            <div class="video-row single-video">
+              <div class="video-column full-width">
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/inspire/inpaint/pickNplace.mp4" type="video/mp4">
+                </video>
+                <!-- <h5 class="subtitle has-text-centered">XHand Inpaint 1.1</h5> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Inpaint Task 2 -->
+          <div class="inpaint-task-container">
+            <h4 class="title is-5">Egg Carton</h4>
+            <div class="task-description">
+            </div>
+            <div class="video-row single-video">
+              <div class="video-column full-width">
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/inspire/inpaint/egg.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inpaint Task 3 -->
+          <div class="inpaint-task-container">
+            <h4 class="title is-5">Tea Picking with Tool (Inspire Hand)
+            </h4>
+            <div class="task-description">
+            </div>
+            <div class="video-row single-video">
+              <div class="video-column full-width">
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/inspire/inpaint/tea.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inpaint Task 3 -->
+          <div class="inpaint-task-container">
+            <h4 class="title is-5">Tea Picking with Tool (XHand)
+            </h4>
+            <div class="task-description">
+            </div>
+            <div class="video-row single-video">
+              <div class="video-column full-width">
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/xhand/inpaint/tea_update.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inpaint Task 4 -->
+          <div class="inpaint-task-container">
+            <h4 class="title is-5">Kitchen Manipulation</h4>
+            <div class="task-description">
+            </div>
+            <div class="video-row single-video">
+              <div class="video-column full-width">
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/xhand/inpaint/kitchen_update.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+      </section>
+      <h3><strong>References</strong></h3>
+      <ul class="references">
+        <li id="ref-ravi2024">Ravi, N., Gabeur, V., Hu, Y. T., Hu, R., Ryali, C., Ma, T., Khedr, H., Rädle, R., Rolland,
+          C.,
+          Gustafson, L., Mintun, E., Pan, J., Alwala, K. V., Carion, N., Wu, C. Y., Girshick, R., Dollár, P., &
+          Feichtenhofer,
+          C. (2024). SAM 2: Segment Anything in Images and Videos. <em>arXiv preprint arXiv:2408.00714</em>. </li>
+        <li id="ref-zhou2023">Zhou, S., Li, C., Chan, K. C. K., & Loy, C. C. (2023). ProPainter: Improving propagation
+          and
+          transformer for video inpainting. In <em>Proceedings of the IEEE/CVF International Conference on Computer
+            Vision</em>
+          (pp. 10477-10486). </li>
+        <li id="ref-chen2024">Chen, L. Y., Xu, C., Dharmarajan, K., Cheng, R., Keutzer, K., Tomizuka, M., Vuong, Q., &
+          Goldberg,
+          K. (2024). RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning. In <em>8th Annual
+            Conference on Robot Learning</em>. </li>
+        <!-- Add more references as needed -->
+      </ul>
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This page was built using the <a
+                    href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic
+                    Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                    target="_blank">Nerfies</a> project page.
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>
