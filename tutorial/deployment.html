@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners -->
+    <meta name="description" content="DexUMI Deployment Guide">
+    <meta property="og:title" content="DexUMI Deployment Guide" />
+    <meta property="og:description" content="Step-by-step guide for setting up DexUMI software components" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <meta property="og:image" content="../static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="DexUMI Deployment Guide">
+    <meta name="twitter:description" content="Step-by-step guide for setting up DexUMI software components">
+    <meta name="twitter:image" content="../static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="DexUMI, Software, Tutorial, Setup, AI, Machine Learning">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DexUMI Deployment Guide</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../static/js/fontawesome.all.min.js"></script>
+    <script src="../static/js/bulma-carousel.min.js"></script>
+    <script src="../static/js/bulma-slider.min.js"></script>
+    <script src="../static/js/index.js"></script>
+
+    <style>
+        .tutorial-video {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tutorial-video video {
+            width: 100%;
+            height: auto;
+        }
+
+        .step-container {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: #fffef0;
+            border-radius: 12px;
+        }
+
+        .step-title {
+            color: #363636;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 4px solid #facc15;
+        }
+
+        .back-button {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .requirements-list {
+            background-color: #fffef7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid #fef08a;
+        }
+
+        .requirements-list ul {
+            margin-left: 1rem;
+        }
+
+        .requirements-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+        }
+
+        .code-block {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .terminal-window {
+            background-color: #374151;
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .terminal-header {
+            background-color: #4b5563;
+            padding: 0.5rem;
+            border-radius: 6px 6px 0 0;
+            color: #f9fafb;
+            font-size: 0.9rem;
+        }
+
+        .terminal-content {
+            background-color: #1f2937;
+            padding: 1rem;
+            border-radius: 0 0 6px 6px;
+            color: #facc15;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="container is-max-desktop">
+            <div class="back-button">
+                <a href="../index.html" class="button is-warning is-outlined">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span>Back to Main Page</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">DexUMI Deployment Guide</h1>
+                        <h2 class="subtitle is-4">Deploy DexUMI in real-world</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prerequisites Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="section-header">
+                <h2 class="title is-2 has-text-white">Installation</h2>
+                <p class="subtitle is-5 has-text-white">Mamba Env and external dependency</p>
+            </div>
+            Tested on Ubuntu 22.04 with both NVIDIA L40S and RTX 4090 GPU. We recommend using GPU with larger memory
+            such that you can process longer demonstration.
+            <!-- Python Environment Setup -->
+            <div style="margin-top: 2rem;"></div>
+            <h4 class="title is-4 step-title">Environment Setup</h4>
+            <div class="terminal-window">
+                <div class="terminal-header">Terminal - Environment Setup</div>
+                <div class="terminal-content">
+                    # We recommend Miniforge for faster installation<br>
+                    cd DexUMI<br>
+                    mamba env create -f environment.yml<br>
+                    mamba activate dexumi<br>
+                    # optional: to set the DEV_PATH in your bashrc or zshrc<br>
+                    export DEV_PATH="/parent/directory/of/DexUMI"<br>
+                </div>
+            </div>
+            <p>DexUMI utilizes <a href="https://github.com/facebookresearch/sam2" target="_blank">SAM2</a> and
+                <a href="https://github.com/sczhou/ProPainter" target="_blank">ProPainter</a> to track and
+                remove the exoskeleton and hand. Our system uses <a href="https://github.com/marek-simonik/record3d"
+                    target="_blank">Record3D</a> to track the
+                wrist pose. To make Record3D compatible with Python 3.10, please follow the instructions <a
+                    href="https://github.com/marek-simonik/record3d/issues/89" target="_blank">here</a>.
+                Alternatively, you can directly install our <a href="https://github.com/mengdaxu/record3d"
+                    target="_blank">forked version</a>, which already integrates the solution.
+            </p>
+
+            <p><strong>Please clone the above three packages into the same directory as DexUMI. The final folder
+                    structure should be:</strong></p>
+
+            <div class="code-block">
+                .<br>
+                ├── DexUMI<br>
+                ├── sam2<br>
+                ├── ProPainter<br>
+                ├── record3D
+            </div>
+
+            <p>Download the SAM2 checkpoint <code>sam2.1_hiera_large.pt</code> into
+                <code>sam2/checkpoints/</code> and install SAM2.
+            </p>
+            <div class="terminal-window">
+                <div class="terminal-header">Terminal - Environment Setup</div>
+                <div class="terminal-content">
+                    cd sam2<br>
+                    pip install -e .<br>
+                </div>
+            </div>
+
+            <p>You also need to install Record3D on your iPhone. We use iPhone 15 Pro Max to track the wrist
+                pose. You can use any iPhone model with ARKit capability, but you might need to modify some CAD
+                models to adapt to other iPhone dimensions.</p>
+
+        </div>
+    </section>
+
+    <!-- Video Tutorial 1: Installation & Setup -->
+    <section class="section is-light">
+        <div class="container is-max-desktop">
+            <div class="section-header">
+                <h2 class="title is-2 has-text-white">Fitting Encoder to Motor Regression</h2>
+                <p class="subtitle is-5 has-text-white">Build action mapping between exoskeleton and robot hardware</p>
+            </div>
+            The goal is to fit a regression model that maps the joint encoder readings from the exoskeleton to
+            the motor value on the robot hand such that
+            the fingertips of the exoskeleton
+            can perfectly overlayed with the fingertips of the robot hand on the wrist camera image space. We
+            achive this by uniformly sampling the robot hand motor value between lower limit and upper limit. Human
+            manully rotates the exoskeleton joint to align the fingertips in the wrist camera image. We can repeat this
+            process to get a pair data point (encoder reading, motor value). After collecting enough data points, we can
+            fit a linear regression model to map the encoder reading to the motor value.
+            We follow the steps below to fit the model:
+
+            <div class="code-block">
+                # Pseudocode for Motor-Encoder Regression Data Collection<br>
+                for motor_id in robot_hand_motors:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;motor_values = []<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;encoder_readings = []<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for motor_value in uniform_sample(motor_lower_limit,
+                motor_upper_limit):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 1) Send sampled motor value to robot hand<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;robot_hand.send_motor_command(motor_id,
+                motor_value)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 2) Robot hand executes the command<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;robot_hand.execute_command()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wait_for_completion()<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 3) Manually rotate corresponding exoskeleton
+                joint<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# to overlay fingertips in wrist camera
+                image<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human("Align exoskeleton fingertip with
+                robot fingertip")<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 4) Record the encoder reading<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encoder_value =
+                exoskeleton.read_encoder(motor_id)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;motor_values.append(motor_value)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encoder_readings.append(encoder_value)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Fit regression model using collected data<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;regression_model = fit_linear_regression(encoder_readings,
+                motor_values)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;save_model(regression_model, f"motor_{motor_id}_regression.pkl")<br>
+            </div>
+
+            Notice, for XHand, we do not fit the regression model for all motor. As we found the mapping between
+            exoskeleton joints and robot hand motor are very close to linear. In this case, you can simply
+            change the calibration angles. See video for details. We also provide our mapping for both hand in
+            the repo such that you can directly use it without fitting the regression model. However, you might
+            also need to slighly adjust the regression model. Also see video for details.
+
+        </div>
+        <br><br><br>
+        <div class="tutorial-video">
+            <iframe width="100%" height="450"
+                src="https://www.youtube.com/embed/v=ms50LBtJoQM?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=7"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Video Tutorial 2: Data Processing -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="section-header">
+                <h2 class="title is-2 has-text-white">2. Data Generation & Collection</h2>
+                <p class="subtitle is-5 has-text-white">Collect, process, and prepare training data</p>
+            </div>
+
+            <h4 class="title is-4 step-title">Data Generation Pipeline</h4>
+            <p>For each collected exoskeleton demonstration, we execute the following data processing pipeline:
+            </p>
+
+            <div class="code-block">
+                # Data Generation Pipeline for DexUMI<br>
+                for demo_video in exoskeleton_demonstrations:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 0: Synchronize multi-modal data streams<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;sync_data_sources(wrist_camera, encoder_readings, wrist_pose,
+                tactile_sensor)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 1: Record robot hand video by replaying actions<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;robot_video = replay_on_robot(encoder_readings)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 2: Resize exoskeleton&robot hand videos<br>
+
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 3: Segment hands from both video streams<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;exo_mask = segment_exoskeleton(demo_video)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;robot_mask = segment_robot_hand(robot_video)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 4: Remove exoskeleton and inpaint background<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;clean_background = inpaint_video(demo_video, exo_mask)<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# Step 5: Composite final high-fidelity manipulation video<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;final_video = composite_videos(clean_background, robot_video,
+                robot_mask, exo_mask)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;save_training_data(final_video, action_labels)
+            </div>
+
+            <p>This pipeline transforms raw exoskeleton demonstrations into high-quality training data by
+                removing the human operator and exoskeleton hardware while preserving the nature occlusion
+                between hand and object.</p>
+            <div class="columns is-centered" style="margin: 2rem 0;">
+                <div class="column is-10">
+                    <figure class="image">
+                        <img src="images/data_workflow.svg" alt="Data generation pipeline overview"
+                            style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="terminal-window">
+                <div class="terminal-header">Data Generation Commands</div>
+                <div class="terminal-content">
+                    cd DexUMI/real_script/data_generation_pipeline<br>
+                    # Sync different data source and replay the exoskelon action on robot hand.<br>
+                    # This cover the Step 0 and Step 1 in the data generation pipeline Pseudocode.<br>
+                    # Modify the DATA_DIR, TARGET_DIR and REFERENCE_DIR before running<br>
+                    ./process.sh <br><br>
+                    # Run data processing pipeline<br>
+                    # This cover the Step 1, 2, 3, 4 and 5 in the data generation pipeline Pseudocode.<br>
+                    # Modify the config/render/render_all_dataset.yaml before running<br>
+                    python render_all_dataset.py<br><br>
+
+                    # Generate the final training data<br>
+                    python 6_generate_dataset.py -d path/to/data_replay -t path/to/final_dataset --force-process
+                    total --force-adjust
+                </div>
+            </div>
+            <h5 class="title is-5">Segmentation Setup (finish it before actual data collection/generation)</h5>
+            <p>To achieve automatic segmentation of the exoskeleton and robot hand, you need to configure prompt
+                points before starting data collection and processing. This is a one-time setup process.</p>
+
+
+
+            <div class="requirements-list">
+                <p><strong>Follow these steps to complete the setup:</strong></p>
+                <ul>
+                    <li><strong>Collect Reference Episode:</strong> Wear the exoskeleton and collect one initial
+                        episode. Ensure your hand and exoskeleton are clearly visible in the first few frames,
+                        with the hand in a fully open and comfortable pose. This episode will serve as your
+                        reference for all future data collection.</li>
+
+                    <li><strong>Generate Robot Replay:</strong> Replay the collected episode on the robot hand
+                        to create corresponding robot hand video.</li>
+
+                    <li><strong>Create Segmentation Prompts:</strong> Set up prompt points for both the
+                        exoskeleton and robot hand segmentation. Save these prompt points to the reference
+                        episode for consistent use across all future collections.</li>
+                </ul>
+                <p>Check the video below for detailed instructions on setting up prompt points and configuring
+                    the
+                    reference episode.</p>
+            </div>
+
+
+            <div class="requirements-list">
+                <h6 class="title is-6">Tips for Better Segmentation Results:</h6>
+                <ul>
+                    <li><strong>Color consistency:</strong> Wear gloves that match the exoskeleton color to
+                        improve detection accuracy</li>
+                    <li><strong>Prompt point optimization:</strong> Experiment with different positive and
+                        negative prompt points, as results can vary significantly based on placement</li>
+                    <li><strong>Sparse prompting:</strong> Use fewer, well-placed prompt points rather than
+                        dense coverage for better results</li>
+                    <li><strong>Background exclusion:</strong> Place negative prompt points on background
+                        regions to prevent SAM2 from including unwanted areas</li>
+                    <li><strong>Region-based segmentation:</strong> Divide the exoskeleton/robot hand into
+                        separate regions (thumb, fingers, pinky) with dedicated prompt points for each, then
+                        combine masks later</li>
+                </ul>
+            </div>
+            <h4 class="title is-4">Data Collection Guide</h4>
+            We visualiuize the prompt points on the wrist camera image. Make sure to adjust your hand and
+            exoskelton to fully cover the prompt points. We also visualize the current encoder reading on the
+            image. The text become red when the encoder reading is not aligned with the prompt points.
+            <br><br><br>
+            <div class="tutorial-video">
+                <iframe width="100%" height="450"
+                    src="https://www.youtube.com/embed/v=5PkcaDuuyFc?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=8"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="terminal-window">
+                <div class="terminal-header">Data Generation Commands</div>
+                <div class="terminal-content">
+                    cd DexUMI/real_script/data_collection/<br>
+                    # If you do not have a force sensor installed, simply omit the -ef flag.<br>
+                    # Create REFERENCE_DIR before running<br>
+                    python record_exoskeleton.py -et -ef --fps 45 --reference-dir
+                    /path/to/reference_folder --hand_type xhand/inspire --data-dir /path/to/data <br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorial 3: Calibration -->
+    <section class="section is-light">
+        <div class="container is-max-desktop">
+            <div class="section-header">
+                <h2 class="title is-2 has-text-white">Real-world deployment</h2>
+                <p class="subtitle is-5 has-text-white">Robot setup</p>
+            </div>
+            <h4 class="title is-4">Calibrate iPhone to EE transformation matrix</h4>
+            Before deploying the policy in the real world, you need to determine the transformation matrix from
+            the iPhone coordinate system to the robot end effector coordinate system. Since the collected data
+            records the pose of the iPhone
+            rather than the actual robot end effector pose, we need to calibrate the transformation matrix so
+            that
+            the
+            iPhone pose can be transformed to the robot end effector pose during deployment. In the following
+            figure, we
+            show two images of 3D printed mounting components between the robot hand and UR5/5e. Mounting
+            component
+            (a)
+            is for actual deployment while mounting component (b) is for calibration. The only difference is
+            that
+            you can place an
+            iPhone on the calibration component. <strong> Note that
+                in image (b), the iPhone pose in the robot hand wrist (flange) frame is exactly the same as the
+                iPhone pose in the exoskeleton wrist (flange) frame.</strong> Therefore, we can use mounting
+            component (b)
+            to
+            determine how to transfer the iPhone pose to the robot end effector pose.
+
+            <div class="columns is-centered">
+                <div class="column is-12">
+                    <figure class="image">
+                        <img src="images/DeploymentAndCalibration.svg" alt="Robot setup diagram">
+                    </figure>
+                </div>
+            </div>
+            In the video, we only calibrate the translation part as we can infer the rotation matrix from
+            definition
+            of the iPhone
+            coordinate frame and UR5/5e end effector coordinate frame. Our script also supports calibrate the
+            rotation matrix. However, in this case, you need to slighly modify the
+            <code>real_script/calibration/record_ur5_trajectory.py</code> to use a space mouse or scripted
+            trajectory to make
+            robot move in SE(3) space (right now is SO(3)).
+            <br><br><br>
+            <div class="tutorial-video">
+                <iframe width="100%" height="450"
+                    src="https://www.youtube.com/embed/v=pgk1L9sOmig?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=6"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="terminal-window">
+                <div class="terminal-header">Calibrate Transformation Matrix between iPhone and robot EE</div>
+                <div class="terminal-content">
+                    cd DexUMI/real_script/calibration<br>
+                    # Make UR5 rotate around flange (TCP/Wrist).<br>
+                    # Note: you might need to modify the target_pose on line 60 to place EE in a safe
+                    region.<br>
+                    python record_ur5_trajectory.py -rp iphone_calibration <br><br>
+                    # Run optimization to compute translation part of the matrix <br>
+                    python compute_ur5_iphone_offset.py -rp iphone_calibration<br><br>
+                </div>
+            </div>
+            After running the above script, you can set the correct transformation matrix in the eval scripts.
+            You
+            can
+            repeat the above process several time and compute the average transformation matrix to get a more
+            accurate result.
+
+            <div style="margin-top: 2rem;"></div>
+
+            <h4 class="title is-4">Policy Depolyment</h4>
+
+            <div class="terminal-window">
+                <div class="terminal-header">Policy Depolyment</div>
+                <div class="terminal-content">
+                    cd DexUMI/real_script/eval_policy<br>
+                    region.<br>
+                    python DexUMI/real_script/open_server.py --dexhand --ur5 <br><br>
+                    # open a new terminal<br>
+                    python DexUMI/real_script/eval_policy/eval_xhand.py --model_path path/to/model --ckpt N # for
+                    xhand<br>
+                    # or<br>
+                    python DexUMI/real_script/eval_policy/eval_inspire.py --model_path path/to/model --ckpt N # for
+                    inspire hand<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic
+                                Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                target="_blank">Nerfies</a> project page.
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

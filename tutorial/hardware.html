@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners -->
+    <meta name="description" content="DexUMI Hardware Assembly Tutorial">
+    <meta property="og:title" content="DexUMI Hardware Assembly Tutorial" />
+    <meta property="og:description" content="Step-by-step guide for assembling DexUMI hardware components" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <meta property="og:image" content="../static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="DexUMI Hardware Assembly Tutorial">
+    <meta name="twitter:description" content="Step-by-step guide for assembling DexUMI hardware components">
+    <meta name="twitter:image" content="../static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="DexUMI, Hardware, Assembly, Tutorial, Robotics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DexUMI Hardware Assembly Tutorial</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../static/js/fontawesome.all.min.js"></script>
+    <script src="../static/js/bulma-carousel.min.js"></script>
+    <script src="../static/js/bulma-slider.min.js"></script>
+    <script src="../static/js/index.js"></script>
+
+    <style>
+        .tutorial-video {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tutorial-video video {
+            width: 100%;
+            height: auto;
+        }
+
+        .step-container {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: #fafafa;
+            border-radius: 12px;
+        }
+
+        .step-title {
+            color: #363636;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 4px solid #3273dc;
+        }
+
+        .back-button {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            background-color: #00d1b2;
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .requirements-list {
+            background-color: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .requirements-list ul {
+            margin-left: 1rem;
+        }
+
+        .requirements-list li {
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+        }
+
+        details summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="container is-max-desktop">
+            <div class="back-button">
+                <a href="../index.html" class="button is-primary is-outlined">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span>Back to Main Page</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">DexUMI Hardware Assembly Tutorial</h1>
+                        <h2 class="subtitle is-4">Step-by-step guide for building your DexUMI exoskeleton</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 0: Model Preview -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Exoskeleton Model Preview</h2>
+                        <p class="subtitle is-5 has-text-white">Explore the CAD views of both XHand and Inspire Hand
+                            DexUMI</p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-half has-text-centered">
+                        <a href="https://cad.onshape.com/documents/7e158032a91b5681734a0bac/w/ddb7f35eb14f420c872ab185/e/6841f3fc3ef2e646e71b0ba4"
+                            target="_blank">
+                            <figure class="image is-4by3">
+                                <img src="images/inspire_model.png" alt="Inspire Hand Model Preview">
+                            </figure>
+                            <p class="is-size-5">Inspire Hand Model</p>
+                        </a>
+                    </div>
+                    <div class="column is-half has-text-centered">
+                        <a href="https://cad.onshape.com/documents/e4e375a7acd566624676e79d/w/0ad885893abcd26f135bcb35/e/56bcc60d6cd295dfe515c23f"
+                            target="_blank">
+                            <figure class="image is-4by3">
+                                <img src="images/xhand_model.png" alt="XHand Model Preview">
+                            </figure>
+                            <p class="is-size-5">XHand Model</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content mt-5">
+                    <p>Click on a model to view it directly in Onshape. You can also export the model in various 3D
+                        formats supported by Onshape.</p>
+                    <ul>
+                        <li><strong>Download Formats:</strong> STL, STEP, SolidWorks, and more</li>
+                        <li><strong>Printer:</strong> Bambu X1C</li>
+                        <li><strong>Material:</strong> PLA-CF</li>
+                        <li><strong>Print Settings:</strong> 50% sparse infill density, 50% infill/wall overlap, 10 wall
+                            loops</li>
+                    </ul>
+                    <div class="buttons">
+                        <a class="button is-primary is-light" href="files/DexUMI_Inspire.3mf" download>
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span>Download Inspire .3mf</span>
+                        </a>
+                        <a class="button is-primary is-light" href="files/DexUMI_XHand.3mf" download>
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span>Download XHand .3mf</span>
+                        </a>
+                    </div>
+                    <p>Feel free to tweak the settings based on your printer and material availability!</p>
+                </div>
+
+            </div>
+        </details>
+    </section>
+
+    <!-- Section 1: Bill of Materials -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Hardware Bill of Materials (BOM)</h2>
+                        <p class="subtitle is-5 has-text-white">All parts needed to build Inspire Hand and XHand DexUMI
+                        </p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <div class="content is-size-6">
+                    <p>This is a compact summary of all hardware components required. Tables are grouped by device and
+                        category. Click the links to purchase directly.</p>
+                </div>
+
+                <style>
+                    .bom-table th {
+                        background-color: #d3f3ee;
+                        /* soft grey-green */
+                        color: #003d36;
+                    }
+
+                    .bom-subheader {
+                        background-color: #f4fbfa;
+                        /* very light and clean */
+                        font-weight: bold;
+                        text-align: left;
+                    }
+
+                    .bom-table th:nth-child(1),
+                    .bom-table td:nth-child(1) {
+                        width: 55%;
+                    }
+
+                    .bom-table th:nth-child(2),
+                    .bom-table td:nth-child(2) {
+                        width: 15%;
+                    }
+
+                    .bom-table th:nth-child(3),
+                    .bom-table td:nth-child(3) {
+                        width: 30%;
+                    }
+                </style>
+
+                <!-- Inspire Hand DexUMI -->
+                <h3 class="title is-4 mt-6">Inspire Hand DexUMI</h3>
+                <table class="table is-bordered is-fullwidth is-size-7 bom-table">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Materials</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
+                                    target="_blank">Bambu PLA-CF Matcha Green</a></td>
+                            <td>500g</td>
+                            <td>$34.99 (1kg)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Electronics</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
+                                    target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
+                            <td>6</td>
+                            <td>$7.65 (5pcs)</td>
+                        </tr>
+                        <tr>
+                            <td>RDC506018A Encoder: <a
+                                    href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
+                                    target="_blank">DigiKey</a>, <a
+                                    href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
+                                    target="_blank">Mouser</a></td>
+                            <td>6</td>
+                            <td>$1.66 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Fasteners</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/dp/B0C1SBGGY6/" target="_blank">M1x8mm Screws</a></td>
+                            <td>4</td>
+                            <td>$7.99 (100pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90591A311/" target="_blank">M1 Hex Nuts</a></td>
+                            <td>4</td>
+                            <td>$4.47 (10pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
+                                    target="_blank">M2 Screws (6/12/16mm)</a></td>
+                            <td>8+1+2</td>
+                            <td>$8.99 (660pcs kit)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
+                                    target="_blank">M2 Lock Nuts</a></td>
+                            <td>11</td>
+                            <td>$9.99 (100pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
+                                    target="_blank">M3 Lock Nuts</a></td>
+                            <td>4</td>
+                            <td>$5.99 (120pcs)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">D-shape Screws</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90265A119/" target="_blank">M3 Shoulder Screws 8mm</a>
+                            </td>
+                            <td>4</td>
+                            <td>$5.29 (1pc)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90265A182/" target="_blank">M3 Shoulder Screws
+                                    15mm</a></td>
+                            <td>1</td>
+                            <td>$4.33 (1pc)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90265A874/" target="_blank">M3 Shoulder Screws
+                                    25mm</a></td>
+                            <td>1</td>
+                            <td>$4.94 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Accessories</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/ELANE-Holster-Support-Elastic-basketball/dp/B08RYPTS54/"
+                                    target="_blank">Finger Sleeves</a></td>
+                            <td>10</td>
+                            <td>$9.97 (40pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
+                                    Gripping Material</a></td>
+                            <td>1.5ft</td>
+                            <td>$54.14 (15 ft)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">iPhone Mounting</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                    target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
+                            <td>4+4</td>
+                            <td>same as above</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
+                                    target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
+                            <td>4+4</td>
+                            <td>$8.99 (172pcs)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Camera System</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
+                                    target="_blank">OAK-1 W</a></td>
+                            <td>1</td>
+                            <td>$249 (1pc)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
+                                    target="_blank">M4x6mm Screws</a></td>
+                            <td>2</td>
+                            <td>$9.99 (300pcs kit)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
+                                    target="_blank">USB-C to USB-A (10ft)</a></td>
+                            <td>1</td>
+                            <td>$16.99 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Consumables</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
+                                    target="_blank">Loctite Threadlocker 242</a></td>
+                            <td>0.03 fl oz</td>
+                            <td>$5.98 (0.2 fl oz)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
+                            <td>20g</td>
+                            <td>$11.99 (30g)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
+                                    target="_blank">Super Glue</a></td>
+                            <td>1pc</td>
+                            <td>$6.98 (4pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
+                                    target="_blank">Lubricate Grease</a></td>
+                            <td>0.2oz</td>
+                            <td>$5.98 (8oz)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- XHand DexUMI -->
+                <h3 class="title is-4 mt-6">XHand DexUMI</h3>
+                <table class="table is-bordered is-fullwidth is-size-7 bom-table">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Materials</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
+                                    target="_blank">Bambu PLA-CF Matcha Green</a></td>
+                            <td>500g</td>
+                            <td>$34.99 (1kg)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Electronics</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
+                                    target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
+                            <td>12</td>
+                            <td>$7.65 (5pcs)</td>
+                        </tr>
+                        <tr>
+                            <td>RDC506018A Encoder: <a
+                                    href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
+                                    target="_blank">DigiKey</a>, <a
+                                    href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
+                                    target="_blank">Mouser</a></td>
+                            <td>12</td>
+                            <td>$1.66 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Fasteners</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
+                                    target="_blank">M2 Screws (12/16mm), M2 Hex Nuts</a></td>
+                            <td>7+6+8</td>
+                            <td>$8.99 (660pcs kit)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
+                                    target="_blank">M2 Lock Nuts</a></td>
+                            <td>5</td>
+                            <td>$9.99 (100pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                    target="_blank">M3 Hex Nuts</a></td>
+                            <td>7</td>
+                            <td>$8.99 (600pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
+                                    target="_blank">M3 Lock Nuts</a></td>
+                            <td>7</td>
+                            <td>$5.99 (120pcs)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">D-shape Screws</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90265A121" target="_blank">M3 Shoulder Screws 10mm</a>
+                            </td>
+                            <td>9</td>
+                            <td>$3.12 (1pc)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.mcmaster.com/90265A124" target="_blank">M3 Shoulder Screws 20mm</a>
+                            </td>
+                            <td>3</td>
+                            <td>$5.65 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Accessories</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Reusable-Newlan-Adjustable-Organizer-Management/dp/B081HH5X61/"
+                                    target="_blank">Cable Ties</a></td>
+                            <td>5</td>
+                            <td>$6.28 (60pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
+                                    Gripping Material</a></td>
+                            <td>1.5ft</td>
+                            <td>$54.14 (15 ft)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">iPhone Mounting</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                    target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
+                            <td>4+4</td>
+                            <td>same as above</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
+                                    target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
+                            <td>4+4</td>
+                            <td>$8.99 (172pcs)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Camera System</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
+                                    target="_blank">OAK-1 W</a></td>
+                            <td>1</td>
+                            <td>$249 (1pc)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
+                                    target="_blank">M4x6mm Screws</a></td>
+                            <td>2</td>
+                            <td>$9.99 (300pcs kit)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
+                                    target="_blank">USB-C to USB-A (10ft)</a></td>
+                            <td>1</td>
+                            <td>$16.99 (1pc)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" class="bom-subheader">Consumables</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
+                                    target="_blank">Loctite Threadlocker 242</a></td>
+                            <td>0.02 fl oz</td>
+                            <td>$5.98 (0.2 fl oz)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
+                            <td>20g</td>
+                            <td>$11.99 (30g)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
+                                    target="_blank">Super Glue</a></td>
+                            <td>1pc</td>
+                            <td>$6.98 (4pcs)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
+                                    target="_blank">Lubricate Grease</a></td>
+                            <td>0.2oz</td>
+                            <td>$5.98 (8oz)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+    </section>
+    <!-- Section 3: Common/Prepare -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Prepare Common Components</h2>
+                        <p class="subtitle is-5 has-text-white">Essential components needed for both exoskeleton</p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <!-- Requirements -->
+                <div class="requirements-list">
+                    <h4 class="title is-4">Items</h4>
+                    <ul>
+                        <li>D-screw components (screw, nut, and tools)</li>
+                        <li>Encoder cable materials</li>
+                        <li>Encoder module parts</li>
+                    </ul>
+                </div>
+
+                <!-- Step 1: Make D-Screw -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Make D-Screw</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/hkWwHmCfrek?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=13"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Step 2: Prepare Encoder Cable -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Prepare Encoder Cable</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/HogbrI1AY0g?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=15"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Step 3: Build Encoder Module -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Build Encoder Module</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/p84_BAzg8Y0?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=14"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- Section 4: XHand Assembly -->
+    <section class="section is-light">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">XHand Exoskeleton Assembly Guide</h2>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <!-- XHand Step 1 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">XHand Index Assembly Guide</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/nXCTc6VWDe0?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=4"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- XHand Step 2 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">XHand Middle/Ring/Pinky Assembly Guide</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/wIx42u2JMM4?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- XHand Step 3 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Xhand Thumb Assembly Guide</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/v=J6vBMdbfzLE?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=5"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- XHand Step 4 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Assemble Fingers to the Palm</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/KI5zRH0OU6E?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=2"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- XHand Step 5 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Oak Camera Mounting</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/U6ks9oOsPSU?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- Section 5: Inspire Hand Assembly -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Inspire Hand Exoskeleton Assembly</h2>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <!-- Inspire Step 1 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Inspire Index/Middle/Ring/Pinky Assembly Guide</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/Ky7y-ZjigEE?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=10"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Inspire Step 2 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Inspire Thumb Assembly Guide</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/N_VXF6tYayg?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=16"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Inspire Step 3 -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Step 3: Oak Camera Mounting</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/X4E_fVvpOf8?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=9"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Share Steps</h2>
+                        <p class="subtitle is-5 has-text-white">Steps needed for both exoskeleton</p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <!-- Step 1: 3D Printing -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">iPhone Mounting</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/v=k4Nsyr4OiMo?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=12"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Step 2: Electronics Preparation -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Finger Grip Tape</h4>
+                    <div class="step-description">
+                        <p><strong>Components:</strong> .</p>
+                        <p><strong>Note:</strong> .</p>
+                    </div>
+                    <div class="tutorial-video">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/v=-yQTlp1iOQI?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=11"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic
+                                Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                target="_blank">Nerfies</a> project page.
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
