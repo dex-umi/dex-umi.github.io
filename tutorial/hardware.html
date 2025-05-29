@@ -158,18 +158,18 @@
                         <a href="https://cad.onshape.com/documents/7e158032a91b5681734a0bac/w/ddb7f35eb14f420c872ab185/e/6841f3fc3ef2e646e71b0ba4"
                             target="_blank">
                             <figure class="image is-4by3">
-                                <img src="images/inspire_model.png" alt="Inspire Hand Model Preview">
+                                <img src="images/inspire_model.png" alt="Inspire Hand DexUMI Model Preview">
                             </figure>
-                            <p class="is-size-5">Inspire Hand Model</p>
+                            <p class="is-size-5">Inspire Hand DexUMI Model</p>
                         </a>
                     </div>
                     <div class="column is-half has-text-centered">
                         <a href="https://cad.onshape.com/documents/e4e375a7acd566624676e79d/w/0ad885893abcd26f135bcb35/e/56bcc60d6cd295dfe515c23f"
                             target="_blank">
                             <figure class="image is-4by3">
-                                <img src="images/xhand_model.png" alt="XHand Model Preview">
+                                <img src="images/xhand_model.png" alt="XHand DexUMI Model Preview">
                             </figure>
-                            <p class="is-size-5">XHand Model</p>
+                            <p class="is-size-5">XHand DexUMI Model</p>
                         </a>
                     </div>
                 </div>
@@ -201,15 +201,101 @@
         </details>
     </section>
 
-    <!-- Section 1: Bill of Materials -->
+    <!-- Section 1: PCB Sourcing -->
     <section class="section">
         <details open>
             <summary>
                 <div class="container is-max-desktop">
                     <div class="section-header">
-                        <h2 class="title is-2 has-text-white">Hardware Bill of Materials (BOM)</h2>
-                        <p class="subtitle is-5 has-text-white">All parts needed to build Inspire Hand and XHand DexUMI
+                        <h2 class="title is-2 has-text-white">PCB Sourcing</h2>
+                        <p class="subtitle is-5 has-text-white">Information for sourcing and fabricating DexUMI circuit boards</p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <div class="buttons">
+                    <a class="button is-primary is-light" href="files/SCH_DexUMI_MainBoard.pdf" download>
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span>Download Schematics</span>
+                    </a>
+                    <a class="button is-primary is-light" href="files/Gerber_DexUMI_MainBoard.zip" download>
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span>Download Gerber Files</span>
+                    </a>
+                    <a class="button is-primary is-light" href="files/PickAndPlace_DexUMI_MainBoard.xlsx" download>
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span>Download Pick and Place</span>
+                    </a>
+                    <a class="button is-primary is-light" href="files/BOM_Board1_DexUMI_MainBoard.xlsx" download>
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span>Download BOM</span>
+                    </a>
+                </div>
+
+                <details class="mt-5">
+                    <summary>
+                        <h3 class="title is-4" style="text-decoration: underline;">Step-by-step Tutorial of Ordering PCBA</h3>
+                    </summary>
+                    <div class="content mt-4">
+                        <p>
+                            To get started, you’ll first need to order the DexUMI circuit board. In this tutorial, we use <strong>JLCPCB</strong> as the PCB manufacturer. <br>
+                            On the <a href="https://jlcpcb.com/" target="_blank">JLCPCB homepage</a>, click the 
+                            <code>Order Now</code> button and follow the step-by-step guide in the image tutorial below.
                         </p>
+                        <p class="mt-3">
+                            First, upload the <code>Gerber file</code> we provided (click the download button above to get it).
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/add_gerber.jpg" alt="Add Gerber File">
+                        </figure>
+                        <p class="mt-3">
+                            Second, follow the image tutorial below to select the correct manufacturer parameters.
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/pcb_manufacture.jpg" alt="PCB Manufacture Settings">
+                        </figure>
+                        <p class="mt-3">
+                            On the new page, click the <code>Bill of Materials</code> column, then upload the <code>BOM file</code> and <code>Pick and Place file</code> we provided.
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/add_bom_pp.jpg" alt="Add BOM and Pick and Place">
+                        </figure>
+                        <p class="mt-3">
+                            After processing, you’ll be presented with a parts confirmation list. If everything is in stock, simply click the <code>NEXT</code> button. If not, you’ll need to manually select similar parts using the suggestions provided by the ordering system.
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/parts_confirm.jpg" alt="Parts Confirmation">
+                        </figure>
+                        <p class="mt-3">
+                            The system may display a message like <code>Project has unselected parts</code>. Don’t worry — this happens because we include some <code>NC</code> (Not Connected) parts, which are not meant to be assembled. Simply click the <code>Do not place</code> button to proceed.
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/warning.jpg" alt="Unselected Parts Warning">
+                        </figure>
+                        <p class="mt-4">
+                            🎉 <strong>Hurray! The last step!</strong> You can now preview the 3D model of your circuit board. If all parts are rendered correctly and look similar to the images below, go ahead and click the <code>NEXT</code> button to place the order!
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/board_top.jpg" alt="Board Top View">
+                        </figure>
+                        <figure class="image mt-2">
+                            <img src="images/board_bottom.jpg" alt="Board Bottom View">
+                        </figure>
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+    <!-- Section 2: Bill of Materials -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Structural Bill of Materials (BOM)</h2>
+                        <p class="subtitle is-5 has-text-white">All structural parts needed to build Inspire Hand and XHand DexUMI</p>
                     </div>
                 </div>
             </summary>
@@ -251,352 +337,488 @@
                 </style>
 
                 <!-- Inspire Hand DexUMI -->
-                <h3 class="title is-4 mt-6">Inspire Hand DexUMI</h3>
-                <table class="table is-bordered is-fullwidth is-size-7 bom-table">
-                    <thead>
-                        <tr>
-                            <th>Part</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Materials</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
-                                    target="_blank">Bambu PLA-CF Matcha Green</a></td>
-                            <td>400g</td>
-                            <td>$34.99 (1kg)</td>
-                        </tr>
+                <details class="mt-5">
+                    <summary>
+                        <h3 class="title is-4 mt-6" style="text-decoration: underline;">Inspire Hand DexUMI</h3>
+                    </summary>
+                
+                    <table class="table is-bordered is-fullwidth is-size-7 bom-table">
+                        <thead>
+                            <tr>
+                                <th>Part</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Materials</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
+                                        target="_blank">Bambu PLA-CF Matcha Green</a></td>
+                                <td>400g</td>
+                                <td>$34.99 (1kg)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Electronics</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
-                                    target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
-                            <td>6</td>
-                            <td>$7.65 (5pcs)</td>
-                        </tr>
-                        <tr>
-                            <td>RDC506018A Encoder: <a
-                                    href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
-                                    target="_blank">DigiKey</a>, <a
-                                    href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
-                                    target="_blank">Mouser</a></td>
-                            <td>6</td>
-                            <td>$1.66 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Electronics</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
+                                        target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
+                                <td>6</td>
+                                <td>$7.65 (5pcs)</td>
+                            </tr>
+                            <tr>
+                                <td>RDC506018A Encoder: <a
+                                        href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
+                                        target="_blank">DigiKey</a>, <a
+                                        href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
+                                        target="_blank">Mouser</a></td>
+                                <td>6</td>
+                                <td>$1.66 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Fasteners</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/dp/B0C1SBGGY6/" target="_blank">M1x8mm Screws</a></td>
-                            <td>4</td>
-                            <td>$7.99 (100pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90591A311/" target="_blank">M1 Hex Nuts</a></td>
-                            <td>4</td>
-                            <td>$4.47 (10pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
-                                    target="_blank">M2 Screws (6/12/16mm)</a></td>
-                            <td>8+1+2</td>
-                            <td>$8.99 (660pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
-                                    target="_blank">M2 Lock Nuts</a></td>
-                            <td>11</td>
-                            <td>$9.99 (100pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
-                                    target="_blank">M3 Lock Nuts</a></td>
-                            <td>4</td>
-                            <td>$5.99 (120pcs)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Fasteners</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/dp/B0C1SBGGY6/" target="_blank">M1x8mm Screws</a></td>
+                                <td>4</td>
+                                <td>$7.99 (100pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90591A311/" target="_blank">M1 Hex Nuts</a></td>
+                                <td>4</td>
+                                <td>$4.47 (10pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
+                                        target="_blank">M2 Screws (6/12/16mm)</a></td>
+                                <td>8+1+2</td>
+                                <td>$8.99 (660pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
+                                        target="_blank">M2 Lock Nuts</a></td>
+                                <td>11</td>
+                                <td>$9.99 (100pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
+                                        target="_blank">M3 Lock Nuts</a></td>
+                                <td>4</td>
+                                <td>$5.99 (120pcs)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">D-shape Screws</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90265A119/" target="_blank">M3 Shoulder Screws 8mm</a>
-                            </td>
-                            <td>4</td>
-                            <td>$5.29 (1pc)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90265A182/" target="_blank">M3 Shoulder Screws
-                                    15mm</a></td>
-                            <td>1</td>
-                            <td>$4.33 (1pc)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90265A874/" target="_blank">M3 Shoulder Screws
-                                    25mm</a></td>
-                            <td>1</td>
-                            <td>$4.94 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">D-shape Screws</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90265A119/" target="_blank">M3 Shoulder Screws 8mm</a>
+                                </td>
+                                <td>4</td>
+                                <td>$5.29 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90265A182/" target="_blank">M3 Shoulder Screws
+                                        15mm</a></td>
+                                <td>1</td>
+                                <td>$4.33 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90265A874/" target="_blank">M3 Shoulder Screws
+                                        25mm</a></td>
+                                <td>1</td>
+                                <td>$4.94 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Accessories</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/ELANE-Holster-Support-Elastic-basketball/dp/B08RYPTS54/"
-                                    target="_blank">Finger Sleeves</a></td>
-                            <td>10</td>
-                            <td>$9.97 (40pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
-                                    Gripping Material</a></td>
-                            <td>1.5ft</td>
-                            <td>$54.14 (15 ft)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Accessories</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/ELANE-Holster-Support-Elastic-basketball/dp/B08RYPTS54/"
+                                        target="_blank">Finger Sleeves</a></td>
+                                <td>10</td>
+                                <td>$9.97 (40pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
+                                        Gripping Material</a></td>
+                                <td>1.5ft</td>
+                                <td>$54.14 (15 ft)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">iPhone Mounting</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
-                                    target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
-                            <td>4+4</td>
-                            <td>$8.99 (600pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
-                                    target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
-                            <td>4+4</td>
-                            <td>$8.99 (172pcs kit)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">iPhone Mounting</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                        target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
+                                <td>4+4</td>
+                                <td>$8.99 (600pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
+                                        target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
+                                <td>4+4</td>
+                                <td>$8.99 (172pcs kit)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Camera System</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
-                                    target="_blank">OAK-1 W</a></td>
-                            <td>1</td>
-                            <td>$249 (1pc)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
-                                    target="_blank">M4x6mm Screws</a></td>
-                            <td>2</td>
-                            <td>$9.99 (300pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
-                                    target="_blank">USB-C to USB-A (10ft)</a></td>
-                            <td>1</td>
-                            <td>$16.99 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Camera System</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
+                                        target="_blank">OAK-1 W</a></td>
+                                <td>1</td>
+                                <td>$249 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
+                                        target="_blank">M4x6mm Screws</a></td>
+                                <td>2</td>
+                                <td>$9.99 (300pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
+                                        target="_blank">USB-C to USB-A (10ft)</a></td>
+                                <td>1</td>
+                                <td>$16.99 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Consumables</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
-                                    target="_blank">Loctite Threadlocker 242</a></td>
-                            <td>0.03 fl oz</td>
-                            <td>$5.98 (0.2 fl oz)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
-                            <td>20g</td>
-                            <td>$11.99 (30g)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
-                                    target="_blank">Super Glue</a></td>
-                            <td>1pc</td>
-                            <td>$6.98 (4pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
-                                    target="_blank">Lubricate Grease</a></td>
-                            <td>0.2oz</td>
-                            <td>$5.98 (8oz)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Consumables</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
+                                        target="_blank">Loctite Threadlocker 242</a></td>
+                                <td>0.03 fl oz</td>
+                                <td>$5.98 (0.2 fl oz)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
+                                <td>20g</td>
+                                <td>$11.99 (30g)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
+                                        target="_blank">Super Glue</a></td>
+                                <td>1pc</td>
+                                <td>$6.98 (4pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
+                                        target="_blank">Lubricate Grease</a></td>
+                                <td>0.2oz</td>
+                                <td>$5.98 (8oz)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
 
                 <!-- XHand DexUMI -->
-                <h3 class="title is-4 mt-6">XHand DexUMI</h3>
-                <table class="table is-bordered is-fullwidth is-size-7 bom-table">
-                    <thead>
-                        <tr>
-                            <th>Part</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Materials</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
-                                    target="_blank">Bambu PLA-CF Matcha Green</a></td>
-                            <td>600g</td>
-                            <td>$34.99 (1kg)</td>
-                        </tr>
+                <details class="mt-5">
+                    <summary>
+                        <h3 class="title is-4 mt-6" style="text-decoration: underline;">XHand DexUMI</h3>
+                    </summary>
+                
+                    <table class="table is-bordered is-fullwidth is-size-7 bom-table">
+                        <thead>
+                            <tr>
+                                <th>Part</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Materials</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://us.store.bambulab.com/products/pla-cf?id=41158283591816"
+                                        target="_blank">Bambu PLA-CF Matcha Green</a></td>
+                                <td>600g</td>
+                                <td>$34.99 (1kg)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Electronics</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
-                                    target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
-                            <td>12</td>
-                            <td>$7.65 (5pcs)</td>
-                        </tr>
-                        <tr>
-                            <td>RDC506018A Encoder: <a
-                                    href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
-                                    target="_blank">DigiKey</a>, <a
-                                    href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
-                                    target="_blank">Mouser</a></td>
-                            <td>12</td>
-                            <td>$1.66 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Electronics</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kidisoii-2-54mm-Housing-Pre-Crimped-Adapter/dp/B0BW69ZB3M/"
+                                        target="_blank">XH 2.54mm-3P Wire 50cm</a></td>
+                                <td>12</td>
+                                <td>$7.65 (5pcs)</td>
+                            </tr>
+                            <tr>
+                                <td>RDC506018A Encoder: <a
+                                        href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120"
+                                        target="_blank">DigiKey</a>, <a
+                                        href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D"
+                                        target="_blank">Mouser</a></td>
+                                <td>12</td>
+                                <td>$1.66 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Fasteners</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
-                                    target="_blank">M2 Screws (12/16mm), M2 Hex Nuts</a></td>
-                            <td>7+6+8</td>
-                            <td>$8.99 (660pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
-                                    target="_blank">M2 Lock Nuts</a></td>
-                            <td>5</td>
-                            <td>$9.99 (100pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
-                                    target="_blank">M3 Hex Nuts</a></td>
-                            <td>7</td>
-                            <td>$8.99 (600pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
-                                    target="_blank">M3 Lock Nuts</a></td>
-                            <td>7</td>
-                            <td>$5.99 (120pcs)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Fasteners</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kadrick-Assortment-Button-Stainless-Washers/dp/B0BX96SMW4/"
+                                        target="_blank">M2 Screws (12/16mm), M2 Hex Nuts</a></td>
+                                <td>7+6+8</td>
+                                <td>$8.99 (660pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/binifiMux-100pcs-Stainless-Nylock-Locking/dp/B07L2W3QX3/"
+                                        target="_blank">M2 Lock Nuts</a></td>
+                                <td>5</td>
+                                <td>$9.99 (100pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                        target="_blank">M3 Hex Nuts</a></td>
+                                <td>7</td>
+                                <td>$8.99 (600pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/M3-Locknuts-Self-Lock-Stainless-Self/dp/B0D146SHYF/"
+                                        target="_blank">M3 Lock Nuts</a></td>
+                                <td>7</td>
+                                <td>$5.99 (120pcs)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">D-shape Screws</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90265A121" target="_blank">M3 Shoulder Screws 10mm</a>
-                            </td>
-                            <td>9</td>
-                            <td>$3.12 (1pc)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.mcmaster.com/90265A124" target="_blank">M3 Shoulder Screws 20mm</a>
-                            </td>
-                            <td>3</td>
-                            <td>$5.65 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">D-shape Screws</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90265A121" target="_blank">M3 Shoulder Screws 10mm</a>
+                                </td>
+                                <td>9</td>
+                                <td>$3.12 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.mcmaster.com/90265A124" target="_blank">M3 Shoulder Screws 20mm</a>
+                                </td>
+                                <td>3</td>
+                                <td>$5.65 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Accessories</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Reusable-Newlan-Adjustable-Organizer-Management/dp/B081HH5X61/"
-                                    target="_blank">Cable Ties</a></td>
-                            <td>5</td>
-                            <td>$6.28 (60pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
-                                    Gripping Material</a></td>
-                            <td>1.5ft</td>
-                            <td>$54.14 (15 ft)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Accessories</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Reusable-Newlan-Adjustable-Organizer-Management/dp/B081HH5X61/"
+                                        target="_blank">Cable Ties</a></td>
+                                <td>5</td>
+                                <td>$6.28 (60pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/gp/product/B0093CQPW8/" target="_blank">3M TB641
+                                        Gripping Material</a></td>
+                                <td>1.5ft</td>
+                                <td>$54.14 (15 ft)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">iPhone Mounting</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
-                                    target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
-                            <td>4+4</td>
-                            <td>same as above</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
-                                    target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
-                            <td>4+4</td>
-                            <td>$8.99 (172pcs kit)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">iPhone Mounting</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Screws-Assortment-Plated-Socket-Washers/dp/B0D3X5CT2J/"
+                                        target="_blank">M3x16mm Screws + M3 Hex Nuts</a></td>
+                                <td>4+4</td>
+                                <td>same as above</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Screws-Assortment-Stainless-Socket-Washers/dp/B0DFWMGFDM/"
+                                        target="_blank">M6x20mm Screws + M6 Hex Nuts</a></td>
+                                <td>4+4</td>
+                                <td>$8.99 (172pcs kit)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Camera System</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
-                                    target="_blank">OAK-1 W</a></td>
-                            <td>1</td>
-                            <td>$249 (1pc)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
-                                    target="_blank">M4x6mm Screws</a></td>
-                            <td>2</td>
-                            <td>$9.99 (300pcs kit)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
-                                    target="_blank">USB-C to USB-A (10ft)</a></td>
-                            <td>1</td>
-                            <td>$16.99 (1pc)</td>
-                        </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Camera System</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://shop.luxonis.com/products/oak-1-w?variant=44051403604191"
+                                        target="_blank">OAK-1 W</a></td>
+                                <td>1</td>
+                                <td>$249 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Kadrick-Assortment-Stainless-Washers-Wrenche/dp/B0BZ6Y8KRD/"
+                                        target="_blank">M4x6mm Screws</a></td>
+                                <td>2</td>
+                                <td>$9.99 (300pcs kit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Anker-Powerline-Pull-up-Resistor-MacBook/dp/B01MZIPYPY"
+                                        target="_blank">USB-C to USB-A (10ft)</a></td>
+                                <td>1</td>
+                                <td>$16.99 (1pc)</td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="3" class="bom-subheader">Consumables</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
-                                    target="_blank">Loctite Threadlocker 242</a></td>
-                            <td>0.02 fl oz</td>
-                            <td>$5.98 (0.2 fl oz)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
-                            <td>20g</td>
-                            <td>$11.99 (30g)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
-                                    target="_blank">Super Glue</a></td>
-                            <td>1pc</td>
-                            <td>$6.98 (4pcs)</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
-                                    target="_blank">Lubricate Grease</a></td>
-                            <td>0.2oz</td>
-                            <td>$5.98 (8oz)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Consumables</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/"
+                                        target="_blank">Loctite Threadlocker 242</a></td>
+                                <td>0.02 fl oz</td>
+                                <td>$5.98 (0.2 fl oz)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/dp/B0BJ65T85R/" target="_blank">UV Resin</a></td>
+                                <td>20g</td>
+                                <td>$11.99 (30g)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/"
+                                        target="_blank">Super Glue</a></td>
+                                <td>1pc</td>
+                                <td>$6.98 (4pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Lucas-Oil-10533-Lithium-Grease/dp/B004X70LZA/"
+                                        target="_blank">Lubricate Grease</a></td>
+                                <td>0.2oz</td>
+                                <td>$5.98 (8oz)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </div>
         </details>
     </section>
-    <!-- Section 3: Common/Prepare -->
+
+    <!-- Section 3: Electronics BOM -->
+    <section class="section">
+        <details open>
+            <summary>
+                <div class="container is-max-desktop">
+                    <div class="section-header">
+                        <h2 class="title is-2 has-text-white">Electronics Bill of Materials (BOM)</h2>
+                        <p class="subtitle is-5 has-text-white">All electronic components and modules for DexUMI circuits</p>
+                    </div>
+                </div>
+            </summary>
+
+            <div class="container is-max-desktop">
+                <div class="content is-size-6">
+                    <p>This is a compact summary of all hardware components required. Tables are grouped by device and
+                        category. Click the links to purchase directly.</p>
+                </div>
+
+                <style>
+                    .bom-table th {
+                        background-color: #d3f3ee;
+                        /* soft grey-green */
+                        color: #003d36;
+                    }
+
+                    .bom-subheader {
+                        background-color: #f4fbfa;
+                        /* very light and clean */
+                        font-weight: bold;
+                        text-align: left;
+                    }
+
+                    .bom-table th:nth-child(1),
+                    .bom-table td:nth-child(1) {
+                        width: 55%;
+                    }
+
+                    .bom-table th:nth-child(2),
+                    .bom-table td:nth-child(2) {
+                        width: 15%;
+                    }
+
+                    .bom-table th:nth-child(3),
+                    .bom-table td:nth-child(3) {
+                        width: 30%;
+                    }
+                </style>
+
+                <!-- Inspire Hand DexUMI -->
+                <details class="mt-5">
+                    <summary>
+                        <h3 class="title is-4 mt-6" style="text-decoration: underline;">Electronic Modules</h3>
+                    </summary>
+                
+                    <table class="table is-bordered is-fullwidth is-size-7 bom-table">
+                        <thead>
+                            <tr>
+                                <th>Part</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Modules</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.aliexpress.com/i/2255800720094040.html"
+                                        target="_blank">STM32F042K6T6 Core Board</a></td>
+                                <td>1</td>
+                                <td>$15.39 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.aliexpress.us/item/3256806212460099.html"
+                                        target="_blank">ADS1256 Module</a></td>
+                                <td>2</td>
+                                <td>$15.44 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/JESSINIE-Module-CH343-Communication-Microcontroller/dp/B0D6352BS9/"
+                                        target="_blank">USB to TTL Module</a></td>
+                                <td>1</td>
+                                <td>$9.95 (3pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/AITRIP-Emulator-Downloader-Programmer-STM32F103C8T6/dp/B0D22S8WVX/"
+                                        target="_blank">ST-Link V2 Downloader</a></td>
+                                <td>3</td>
+                                <td>$5.99 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="bom-subheader">Accessories</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/ALIENTEK-Adjustable-DP100-Precision-Regulated/dp/B0CRDJBPRV/"
+                                        target="_blank">DC Power Supply</a></td>
+                                <td>1</td>
+                                <td>$60.15 (1pc)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/BDHI-Female-Connectors-Turnigy-BDHI-19/dp/B08FRBJL1C/"
+                                        target="_blank">XT30 Female Connectors w/ Wire</a></td>
+                                <td>1</td>
+                                <td>$8.58 (5pcs)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/EDGELEC-Breadboard-1pin-1pin-Connector-Multicolored/dp/B07GD2BWPY/"
+                                        target="_blank">Dupont Cable Male to Female</a></td>
+                                <td>3</td>
+                                <td>$6.98 (120pcs assorted)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.amazon.com/Radio-Wiring-Harness-Cloth-Tape/dp/B08RS5P3WZ/"
+                                        target="_blank">Automotive Cloth Tape</a></td>
+                                <td>1 rolls</td>
+                                <td>$9.99 (2pcs)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- Section 4: Common/Prepare -->
     <section class="section">
         <details open>
             <summary>
@@ -670,7 +892,7 @@
         </details>
     </section>
 
-    <!-- Section 4: XHand Assembly -->
+    <!-- Section 5: XHand Assembly -->
     <section class="section is-light">
         <details open>
             <summary>
@@ -760,11 +982,21 @@
                             allowfullscreen></iframe>
                     </div>
                 </div>
+                <!-- Step 6: Connect to the board -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Connect XHand Exoskeleton to the DexUMI Circuit Board</h4>
+                    <div class="content mt-3">
+                        <p>Follow the wiring sequence shown in the image below to connect encoders to the circuit board.</p>
+                    </div>
+                    <figure class="image mt-3" style="width: 100%; margin: 0 auto;">
+                        <img src="images/xhand_connection.jpg" alt="XHand Connection Diagram">
+                    </figure>
+                </div>
             </div>
         </details>
     </section>
 
-    <!-- Section 5: Inspire Hand Assembly -->
+    <!-- Section 6: Inspire Hand Assembly -->
     <section class="section">
         <details open>
             <summary>
@@ -823,6 +1055,18 @@
                             allowfullscreen></iframe>
                     </div>
                 </div>
+
+                <!-- Step 4: Connect to the board -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Connect Inspire Hand Exoskeleton to the DexUMI Circuit Board</h4>
+                    <div class="content mt-3">
+                        <p>Follow the wiring sequence shown in the image below to connect encoders to the circuit board.</p>
+                    </div>
+                    <figure class="image mt-3" style="width: 100%; margin: 0 auto;">
+                        <img src="images/inspire_connection.jpg" alt="Inspire Hand Connection Diagram">
+                    </figure>
+                </div>
+
             </div>
         </details>
     </section>
@@ -866,6 +1110,68 @@
                             src="https://www.youtube.com/embed/v=-yQTlp1iOQI?list=PLAymUyzwr8XgxwJzWp1MHkBzKIRJLdRJg&index=11"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Step 3: Flash the firmware -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Flash the Firmware to DexUMI MCU</h4>
+
+                    <div class="buttons is-centered mb-4">
+                        <a class="button is-primary is-light" href="https://github.com/real-stanford/DexUMI/blob/main/embedded_system/assets/DexUMI_Inspire.hex" target="_blank">
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span>DexUMI Inspire Firmware</span>
+                        </a>
+                        <a class="button is-primary is-light" href="https://github.com/real-stanford/DexUMI/blob/main/embedded_system/assets/DexUMI_XHand.hex" target="_blank">
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span>DexUMI XHand Firmware</span>
+                        </a>
+                    </div>
+
+                    <div class="content">
+                        <p>
+                            To flash the firmware into the MCU, we first need to install <a href="https://openocd.org/pages/getting-openocd.html" target="_blank">openocd</a> on the target PC:
+                        </p>
+                        <code>sudo apt-get install openocd</code>
+
+                        <p class="mt-4">Then connect the MCU with ST-LINK V2, as shown below:</p>
+                        <figure class="image mt-2">
+                            <img src="images/stlink.jpg" alt="ST-LINK Connection Diagram">
+                        </figure>
+
+                        <p class="mt-4">Finally, run this script to flash the firmware into the MCU.</p>
+                        <p><strong>For Inspire Hand DexUMI:</strong></p>
+                        <code>openocd -f interface/stlink-v2.cfg -f target/stm32f0x.cfg -c "program DexUMI_Inspire.hex verify reset exit"</code>
+
+                        <p class="mt-3"><strong>For XHand DexUMI:</strong></p>
+                        <code>openocd -f interface/stlink-v2.cfg -f target/stm32f0x.cfg -c "program DexUMI_XHand.hex verify reset exit"</code>
+                    </div>
+                </div>
+                <!-- Step 4: Connect the Circuit Board to the PC -->
+                <div class="step-container">
+                    <h4 class="title is-4 step-title">Connect the DexUMI Circuit Board to Your PC</h4>
+                    <div class="content mt-3">
+                        <p>First, we need to install the MCU board and ADC modules on the DexUMI circuit board.</p>
+                        <p class="mt-2">Insert the MCU at the top of the board, as shown below:</p>
+                        <figure class="image mt-2">
+                            <img src="images/install_stm32.jpg" alt="Install STM32 MCU">
+                        </figure>
+
+                        <p class="mt-3">Then insert the ADC modules at the bottom of the board:</p>
+                        <figure class="image mt-2">
+                            <img src="images/install_adc.jpg" alt="Install ADC Modules">
+                        </figure>
+
+                        <p class="mt-3">
+                            Next, power on the board. Connect <strong>DC 5.0V 1.0A</strong> through the XT30 female connector using a wired input, then press the switch to power up.
+                        </p>
+
+                        <p class="mt-3">
+                            Finally, connect the board to your PC using a USB-TTL module, as shown below:
+                        </p>
+                        <figure class="image mt-2">
+                            <img src="images/connection.jpg" alt="Connect with USB-TTL">
+                        </figure>
                     </div>
                 </div>
             </div>
