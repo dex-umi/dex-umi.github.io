@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <!-- Meta tags for social media banners -->
-    <meta name="description" content="Research Project Page">
-    <meta property="og:title" content="Research Project Page" />
-    <meta property="og:description" content="Research Project Page Description" />
-    <meta property="og:url" content="URL OF THE WEBSITE" />
-    <meta property="og:image" content="static/image/your_banner_image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta name="description" content="DexUMI">
+    <meta property="og:title" content="DexUMI" />
+    <meta property="og:description" content="DexUMI" />
+    <meta property="og:url" content="https://dex-umi.github.io/" />
+    <meta property="og:image" content="../../../static/image/teaser.png" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="650" />
 
-    <meta name="twitter:title" content="Research Project Page">
-    <meta name="twitter:description" content="Research Project Page Description">
-    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:title" content="DexUMI">
+    <meta name="twitter:description" content="DexUMI">
+    <meta name="twitter:image" content="static/images/teaser.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="keywords" content="Research, Project">
+    <meta name="keywords" content="DexUMI, Manipulation, Robotics">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../static/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
     <link rel="stylesheet" href="../../../static/css/bulma.min.css">
@@ -61,135 +61,129 @@
                     </div>
                 </div>
             </div>
-            <section class="section">
-                <div class="container is-max-desktop">
+            <h2 class="title is-3 section-title">Inspire Hand</h2>
+            <!-- Video Row 1 -->
+            <div class="video-row">
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Relative finger actions with tactile sensor
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_REL_FSR.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Relative finger actions without tactile</h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_REL_NO_FSR.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
-                    <section class="section">
-                        <div class="container is-max-desktop">
-                            <h2 class="title is-3 section-title">Inspire Hand</h2>
-                            <!-- Video Row 1 -->
-                            <div class="video-row">
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Relative finger actions with tactile sensor
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_REL_FSR.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Relative finger actions without tactile</h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_REL_NO_FSR.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
+            <!-- Video Row 2 -->
+            <div class="video-row">
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Absolute finger actions with tactile sensor
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_ABS_W_FSR.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Absolute finger actions without tactile</h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_ABS_NO_FSR.mp4" type="video/mp4">
+                    </video>
+                    The recording camera had a glitch when recording this ablation; therefore, we showed
+                    the view
+                    from the pixel matching camera.
+                </div>
+            </div>
 
-                            <!-- Video Row 2 -->
-                            <div class="video-row">
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Absolute finger actions with tactile sensor
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_ABS_W_FSR.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Absolute finger actions without tactile</h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_ABS_NO_FSR.mp4" type="video/mp4">
-                                    </video>
-                                    The recording camera had a glitch when recording this ablation; therefore, we showed
-                                    the view
-                                    from the pixel matching camera.
-                                </div>
-                            </div>
+            <!-- Video Row 3 -->
+            <div class="video-row">
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Without Inpainting (Raw)</h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_NORENDER.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Without Inpainting (Maskout)</h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/TEA_MASKOUT.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <h2 class="title is-3 section-title">XHand</h2>
+            <!-- Video Row 1 -->
+            <div class="video-row">
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Relative finger actions with tactile sensor
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/rel_tac.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Relative finger actions without tactile
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/rel_no_tac.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
-                            <!-- Video Row 3 -->
-                            <div class="video-row">
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Without Inpainting (Raw)</h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_NORENDER.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Without Inpainting (Maskout)</h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/TEA_MASKOUT.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-                            <h2 class="title is-3 section-title">XHand</h2>
-                            <!-- Video Row 1 -->
-                            <div class="video-row">
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Relative finger actions with tactile sensor
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/rel_tac.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Relative finger actions without tactile
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/rel_no_tac.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-
-                            <!-- Video Row 2 -->
-                            <div class="video-row">
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Absolute finger actions with tactile sensor
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/abs_tac.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="video-column">
-                                    <h5 class="subtitle has-text-centered">Absolute finger actions without tactile
-                                    </h5>
-                                    <video poster="" controls>
-                                        <source src="../fullvideos/tea/abs_no_tac.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
+            <!-- Video Row 2 -->
+            <div class="video-row">
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Absolute finger actions with tactile sensor
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/abs_tac.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-column">
+                    <h5 class="subtitle has-text-centered">Absolute finger actions without tactile
+                    </h5>
+                    <video poster="" controls>
+                        <source src="../fullvideos/tea/abs_no_tac.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
 
-                            <!-- Back Button -->
-                            <div class="back-button">
-                                <a href="../../../index.html" class="button is-primary is-small">
-                                    <span class="icon">
-                                        <i class="fas fa-arrow-left"></i>
-                                    </span>
-                                    <span>Back to Main Page</span>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-            </section>
+            <!-- Back Button -->
+            <div class="back-button">
+                <a href="../../../index.html" class="button is-primary is-small">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span>Back to Main Page</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <footer class="footer">
-                <div class="container">
-                    <div class="columns is-centered">
-                        <div class="column is-8">
-                            <div class="content">
-                                <p>
-                                    This page was built using the <a
-                                        href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                                        target="_blank">Academic
-                                        Project Page Template</a> which was adopted from the <a
-                                        href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-                                    This website is licensed under a <a rel="license"
-                                        href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                                        Commons Attribution-ShareAlike 4.0 International License</a>.
-                                </p>
-                            </div>
-                        </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic
+                                Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
